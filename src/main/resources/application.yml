@@ -1,14 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/{bd}
-    username:
-    password:
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:mysql://localhost:3306/java_db
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
-    hibernate:
-      ddl-auto: create
+    hibernate.ddl-auto: update
     database: mysql
-    database-platform: org.hibernate.dialect.PostgreSQDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
     properties:
       hibernate:
